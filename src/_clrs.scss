@@ -1,0 +1,60 @@
+// Primary
+$lightRed: hsl(0, 100%, 67%);
+$orangeyYellow: hsl(39, 100%, 56%);
+$greenTeal: hsl(166, 100%, 37%);
+$cobaltBlue: hsl(234, 85%, 45%);
+
+$lightRed1: hsla(0, 100%, 67%, 0.05);
+$orangeyYellow1: hsla(39, 100%, 56%, 0.05);
+$greenTeal1: hsla(166, 100%, 37%, 0.05);
+$cobaltBlue1: hsla(234, 85%, 45%, 0.05);
+
+
+$gradientBg: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+$gradientCircle: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+$white: hsl(0, 0%, 100%);
+$paleBlue: hsl(221, 100%, 96%);
+$lightLavender: hsl(241, 100%, 89%);
+$darkGrayBlue: hsl(224, 30%, 27%);
+
+
+$colors: (1: $lightRed, 2: $orangeyYellow, 3: $greenTeal, 4: $cobaltBlue);
+
+@each $key, $color in $colors {
+  .summary_type-#{$key} {color: $color;}
+}
+
+$colors: (1: $lightRed1, 2: $orangeyYellow1, 3: $greenTeal1, 4: $cobaltBlue1);
+
+@each $key, $color in $colors {
+  .category-#{$key} {background: $color;}
+}
+
+
+// somehow it should make transition on hover button animated but did not work for me
+//--------------------------------------------------------- 
+// @mixin gradientAnimation( $start, $end, $transTime ){
+//   background-size: 100%;
+//   background: $darkGrayBlue;
+//   position: relative;
+//   z-index: 100;
+//   &:before {
+//     background: linear-gradient($end, $start);
+//     border-radius: inherit;
+//       content: "";
+//       display: block;
+//       height: 100%;
+//       position: absolute;
+//       top: 0; left: 0;
+//       opacity: 0;
+//       width: 100%;
+//       z-index: -100;
+//       transition: opacity $transTime;
+//   }
+//   &:hover {
+//       &:before {
+//           opacity: 1;
+//       }
+//   }
+// }

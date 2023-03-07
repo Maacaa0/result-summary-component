@@ -1,0 +1,154 @@
+@use 'clrs' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.App {
+    font-family: "Hanken Grotesk", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.project_container {
+    display: flex;
+    box-shadow: $paleBlue 31px 40px 27px -5px, $paleBlue 0px 8px 16px -8px;
+    border-radius: 1.8rem;
+}
+
+.main_container {
+    height: 28.5rem;
+    width: 20.5rem;
+    padding: 2.2rem 3rem;
+    z-index: 2;
+
+    background-image: $gradientBg;
+    border-radius: 1.8rem;
+    color: $white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        color: $lightLavender;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 11rem;
+        height: 11rem;
+        margin-bottom: 1.7rem;
+        border-radius: 100%;
+        background-image: $gradientCircle;
+
+        h3 {
+            margin-top: 16px;
+            font-size: 4rem;
+        }
+
+        p {
+            position: relative;
+            top: -19px;
+            color: lightgray;
+            opacity: 0.5;
+        }
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.7rem;
+    }
+
+    p {
+        text-align: center;
+        color: lightgray;
+    }
+}
+
+.summary_container {
+    height: 28.5rem;
+    width: 20.5rem;
+    padding: 2.2rem;
+    z-index: 2;
+
+    border-radius: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    section {
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        width: 100%;
+        border-radius: 0.4rem;
+        padding: 0 0.9rem;
+        
+        .category_container {
+            display: flex;
+        }
+
+        img {
+            margin-right: .7rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+            align-self: center;
+            opacity: .7;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        span {
+            color: lightslategray;
+        }
+    }
+
+    h4 {
+        align-self: flex-start;
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 100%;
+        color: white;
+        font-size: 0.95rem;
+        font-weight: 700;
+        background: hsl(224, 30%, 27%);
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        margin-top: .9rem;
+        border: none;
+
+        
+        &:hover {
+            background: $gradientBg;
+            cursor: pointer;
+            transition: 250ms ease;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+}
+
