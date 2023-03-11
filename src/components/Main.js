@@ -1,11 +1,13 @@
 import React from "react";
+import CountUp from "react-countup";
 
 export default function Main(props) {
+
     return (
         <div className="main_container">
             <h2>Your Result</h2>
             <div>
-                <h3>{props.scoreAvg}</h3>
+                <h3><CountUp duration={.6} end={props.scoreAvg} /></h3>
                 <p>of 100</p>
             </div>
 

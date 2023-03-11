@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 
 export default function Summary(props) {
     return (
@@ -7,7 +8,7 @@ export default function Summary(props) {
                 <img src={props.img} alt="#" />
                 <h4 className={`summary_type-${props.value}`}>{props.type}</h4>
             </div>
-            <p className="summary_score">{props.score} <span>/ 100</span></p>
+            <p className="summary_score"><CountUp duration={.6} end={props.score} />  <small>/ 100</small></p>
         </section>
     )
 }

@@ -55,6 +55,10 @@
         h3 {
             margin-top: 16px;
             font-size: 4rem;
+
+            span {
+                font-size: inherit;
+            }
         }
 
         p {
@@ -117,8 +121,14 @@
             font-weight: bold;
         }
 
-        span {
+        small {
             color: lightslategray;
+        }
+
+        &:hover {
+            filter: hue-rotate(200deg);
+            transform: scale(1.05);
+            cursor: pointer;
         }
     }
 
@@ -150,5 +160,20 @@
         }
     }
 
+}
+
+@media (max-width: 750px) {
+    .project_container {
+        flex-direction: column;
+    }
+
+    .main_container {
+        width: 100%;
+        border-radius: 0 0 1.8rem 1.8rem;
+    }
+
+    .summary_container {
+        width: 100%;
+    }
 }
 

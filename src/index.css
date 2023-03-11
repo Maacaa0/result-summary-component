@@ -83,6 +83,9 @@
   margin-top: 16px;
   font-size: 4rem;
 }
+.main_container div h3 span {
+  font-size: inherit;
+}
 .main_container div p {
   position: relative;
   top: -19px;
@@ -133,8 +136,13 @@
 .summary_container section p {
   font-weight: bold;
 }
-.summary_container section span {
+.summary_container section small {
   color: lightslategray;
+}
+.summary_container section:hover {
+  filter: hue-rotate(200deg);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .summary_container h4 {
   align-self: flex-start;
@@ -158,6 +166,19 @@
 }
 .summary_container button:active {
   transform: scale(0.95);
+}
+
+@media (max-width: 750px) {
+  .project_container {
+    flex-direction: column;
+  }
+  .main_container {
+    width: 100%;
+    border-radius: 0 0 1.8rem 1.8rem;
+  }
+  .summary_container {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
